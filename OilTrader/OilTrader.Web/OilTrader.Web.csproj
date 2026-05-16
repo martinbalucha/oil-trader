@@ -4,6 +4,8 @@
         <TargetFramework>net10.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>OilTrader.Web</AssemblyName>
+        <RootNamespace>OilTrader.Web</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

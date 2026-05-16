@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader", "OilTrader\OilTrader.csproj", "{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Web", "OilTrader.Web\OilTrader.Web.csproj", "{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
