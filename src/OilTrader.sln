@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Web", "OilTrader.Web\OilTrader.Web.csproj", "{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Contracts", "OilTrader.Contracts\OilTrader.Contracts.csproj", "{16A5A466-3CD9-42CA-97DC-956E95301F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Domain", "OilTrader.Domain\OilTrader.Domain.csproj", "{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
