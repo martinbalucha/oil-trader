@@ -2,6 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Web", "OilTrader.Web\OilTrader.Web.csproj", "{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Contracts", "OilTrader.Contracts\OilTrader.Contracts.csproj", "{16A5A466-3CD9-42CA-97DC-956E95301F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Domain", "OilTrader.Domain\OilTrader.Domain.csproj", "{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OilTrader.Tests", "OilTrader.Tests", "{64710E95-099C-4B2C-AD43-FF1674565DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Tests.Unit", "OilTrader.Tests.Unit\OilTrader.Tests.Unit.csproj", "{9E266953-E598-4CC0-9DBB-3BC5416F23CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OilTrader.Tests.Integration", "OilTrader.Tests.Integration\OilTrader.Tests.Integration.csproj", "{37B78E37-6592-4237-B767-DB226412FE29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +22,25 @@ Global
 		{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB058D2F-5DA3-49C6-9085-6B81D3CD2970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A5A466-3CD9-42CA-97DC-956E95301F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDBA398-B2A7-4CC8-9228-6184189EA2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E266953-E598-4CC0-9DBB-3BC5416F23CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E266953-E598-4CC0-9DBB-3BC5416F23CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E266953-E598-4CC0-9DBB-3BC5416F23CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E266953-E598-4CC0-9DBB-3BC5416F23CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B78E37-6592-4237-B767-DB226412FE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B78E37-6592-4237-B767-DB226412FE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B78E37-6592-4237-B767-DB226412FE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B78E37-6592-4237-B767-DB226412FE29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E266953-E598-4CC0-9DBB-3BC5416F23CA} = {64710E95-099C-4B2C-AD43-FF1674565DF7}
+		{37B78E37-6592-4237-B767-DB226412FE29} = {64710E95-099C-4B2C-AD43-FF1674565DF7}
 	EndGlobalSection
 EndGlobal
