@@ -31,6 +31,6 @@ public sealed record Price
         return new Price(value);
     }
 
-    public static bool operator >=(Price a, Price b) => a.Value >= b.Value;
-    public static bool operator <=(Price a, Price b) => a.Value <= b.Value;
+    public static bool operator >(Price a, Price b) => a.Value >= b.Value;
+    public static bool operator <(Price a, Price b) => a.Value <= b.Value;
 }
