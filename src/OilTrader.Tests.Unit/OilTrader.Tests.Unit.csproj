@@ -18,4 +18,8 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\OilTrader.Domain\OilTrader.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

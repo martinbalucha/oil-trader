@@ -1,4 +1,6 @@
-﻿using Serilog;
+﻿using OilTrader.Contracts;
+using OilTrader.Domain;
+using Serilog;
 using Serilog.Formatting.Json;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,7 @@ builder.Host.UseSerilog((context, _, loggerConfiguration) =>
 });
 
 builder.Services.AddControllers();
+builder.Services.AddSingleton<ITickRepository, QueueTickRepository>();
 
 var app = builder.Build();
 

@@ -10,4 +10,7 @@
       <ProjectReference Include="..\OilTrader.Contracts\OilTrader.Contracts.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <InternalsVisibleTo Include="OilTrader.Tests.Unit" />
+    </ItemGroup>
 </Project>
