@@ -1,41 +1,38 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Serilog;
+using Serilog.Formatting.Json;
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+var builder = WebApplication.CreateBuilder(args);
+
+var listenUrls = builder.Configuration.GetSection("Server").GetValue<string>("Urls")
+    ?? throw new InvalidOperationException(
+        "Missing configuration key Server:Urls; see appsettings.json.");
+builder.WebHost.UseUrls(listenUrls);
+
+var rollingLogPath = Path.Combine(builder.Environment.ContentRootPath, "logs", "oiltrader-.json");
+
+builder.Host.UseSerilog((context, _, loggerConfiguration) =>
+{
+    loggerConfiguration
+        .ReadFrom.Configuration(context.Configuration)
+        .Enrich.FromLogContext()
+        .WriteTo.Console(new JsonFormatter())
+        .WriteTo.File(new JsonFormatter(), rollingLogPath, rollingInterval: RollingInterval.Day);
+});
+
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSerilogRequestLogging();
+
+app.MapControllers();
+
+try
 {
-    app.MapOpenApi();
+    Log.Information("OilTrader.Web starting");
+    app.Run();
 }
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
+finally
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast");
-
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    Log.CloseAndFlush();
 }
