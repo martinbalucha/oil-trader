@@ -15,4 +15,9 @@
         <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\OilTrader.Contracts\OilTrader.Contracts.csproj" />
+      <ProjectReference Include="..\OilTrader.Domain\OilTrader.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
