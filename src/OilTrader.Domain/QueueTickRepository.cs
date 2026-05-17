@@ -5,7 +5,7 @@ namespace OilTrader.Domain;
 
 public class QueueTickRepository : ITickRepository
 {
-    private const int MaxSize = 1000;
+    internal const int MaxSize = 1000;
 
     private readonly object _lock = new();
     private readonly ConcurrentQueue<Tick> _queue = new();
@@ -26,6 +26,8 @@ public class QueueTickRepository : ITickRepository
 
     public IAsyncEnumerable<Tick> GetRecentAsync(int count, CancellationToken ct = default)
     {
+        count = count < 0 ? 0 : count;
+
         var snapshot = _queue.ToArray();
 
         var result = snapshot.Length <= count
