@@ -5,6 +5,11 @@ using OilTrader.Contracts.Ticking;
 
 namespace OilTrader.Domain;
 
+/// <summary>
+/// The aggregator maintains two "open bars" simultaneously: one M1 and one H1.
+/// Every incoming tick is measured against those boundaries. When a tick crosses into a new minute,
+/// the old M1 bar is completed and broadcast; when it crosses into a new hour, the H1 bar closes too.
+/// </summary>
 public class TimeframeAggregator : ITimeframeAggregator
 {
     private readonly IMessagePublisher _publisher;
