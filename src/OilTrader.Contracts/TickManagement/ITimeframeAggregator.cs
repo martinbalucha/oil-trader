@@ -8,9 +8,10 @@
 public interface ITimeframeAggregator
 {
     /// <summary>
-    ///
+    /// Submits a tick to the aggregator for processing.
     /// </summary>
-    /// <param name="tick"></param>
-    /// <returns></returns>
+    /// <param name="tick">The market tick to process.</param>
+    /// <returns>A task that completes once the tick has been processed</returns>
+    /// <exception cref="ArgumentNullException">If tick is null</exception>
     Task FeedAsync(Tick tick);
 }
