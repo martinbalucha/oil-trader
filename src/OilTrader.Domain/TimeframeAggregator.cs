@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using OilTrader.Contracts;
 using OilTrader.Contracts.Messaging;
-using OilTrader.Contracts.Ticking;
+using OilTrader.Contracts.TickManagement;
 
 namespace OilTrader.Domain;
 

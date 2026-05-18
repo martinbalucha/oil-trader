@@ -1,4 +1,4 @@
-﻿namespace OilTrader.Contracts.Ticking;
+﻿namespace OilTrader.Contracts.TickManagement;
 
 /// <summary>
 /// Compresses an unbounded stream of ticks into a small set of OHLC bars. Instead of thousands of prices,

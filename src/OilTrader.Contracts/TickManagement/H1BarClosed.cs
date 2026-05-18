@@ -1,6 +1,6 @@
 ﻿using OilTrader.Contracts.Messaging;
 
-namespace OilTrader.Contracts.Ticking;
+namespace OilTrader.Contracts.TickManagement;
 
 /// <summary>
 /// Carries information about M1 bar being closed
