@@ -1,4 +1,4 @@
-using OilTrader.Contracts;
+﻿using OilTrader.Contracts;
 using OilTrader.Contracts.TickManagement;
 
 namespace OilTrader.Tests.Unit;
