@@ -29,6 +29,7 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton<ITickRepository, QueueTickRepository>();
 builder.Services.AddSingleton<IMessagePublisher, InMemoryMessagePublisher>();
 builder.Services.AddSingleton<ITimeframeAggregator, TimeframeAggregator>();
+builder.Services.AddSingleton<ITickService, TickService>();
 
 var app = builder.Build();
 

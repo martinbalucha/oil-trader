@@ -17,8 +17,11 @@ public class TickService : ITickService
         _logger = logger;
     }
 
-    public Task ProcessAsync(Tick tick, CancellationToken ct = default)
+    public async Task ProcessAsync(Tick tick, CancellationToken ct = default)
     {
-        throw new NotImplementedException();
+        await _repository.AddAsync(tick, ct);
+        await _timeframeAggregator.FeedAsync(tick);
+
+        _logger.LogDebug("Tick processed {Symbol}", tick.Symbol);
     }
 }
