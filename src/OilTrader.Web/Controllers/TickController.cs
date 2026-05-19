@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using OilTrader.Contracts.TickManagement;
 using OilTrader.Web.Models;
 
-namespace OilTrader.Web.Controllers.V1;
+namespace OilTrader.Web.Controllers;
 
 /// <summary>
 /// API Controller for Tick operations
