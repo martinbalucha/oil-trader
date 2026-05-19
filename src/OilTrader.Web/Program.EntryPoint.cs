@@ -1,3 +1,3 @@
-namespace OilTrader.Web;
+﻿namespace OilTrader.Web;
 
 public partial class Program;

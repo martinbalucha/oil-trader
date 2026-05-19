@@ -1,4 +1,4 @@
-namespace OilTrader.Tests.Integration.Infrastructure;
+﻿namespace OilTrader.Tests.Integration.Infrastructure;
 
 public static class IntegrationTestCollection
 {
