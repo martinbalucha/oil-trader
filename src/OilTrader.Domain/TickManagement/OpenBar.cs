@@ -1,6 +1,6 @@
 ﻿using OilTrader.Contracts;
 
-namespace OilTrader.Domain;
+namespace OilTrader.Domain.TickManagement;
 
 /// <summary>
 /// Mutable accumulator for the in-progress bar.

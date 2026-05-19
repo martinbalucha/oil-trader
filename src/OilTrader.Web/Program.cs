@@ -3,6 +3,7 @@ using OilTrader.Contracts.Messaging;
 using OilTrader.Contracts.TickManagement;
 using OilTrader.Domain;
 using OilTrader.Domain.Messaging;
+using OilTrader.Domain.TickManagement;
 using Serilog;
 using Serilog.Formatting.Json;
 

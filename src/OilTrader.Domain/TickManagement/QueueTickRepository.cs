@@ -1,16 +1,16 @@
 ﻿using System.Collections.Concurrent;
 using OilTrader.Contracts;
 
-namespace OilTrader.Domain;
+namespace OilTrader.Domain.TickManagement;
 
 public class QueueTickRepository : ITickRepository
 {
     internal const int MaxSize = 1000;
 
     private readonly object _lock = new();
-    private readonly ConcurrentQueue<Tick> _queue = new();
+    private readonly ConcurrentQueue<Contracts.Tick> _queue = new();
 
-    public Task AddAsync(Tick tick, CancellationToken ct = default)
+    public Task AddAsync(Contracts.Tick tick, CancellationToken ct = default)
     {
         lock (_lock)
         {
@@ -24,7 +24,7 @@ public class QueueTickRepository : ITickRepository
         return Task.CompletedTask;
     }
 
-    public IAsyncEnumerable<Tick> GetRecentAsync(int count, CancellationToken ct = default)
+    public IAsyncEnumerable<Contracts.Tick> GetRecentAsync(int count, CancellationToken ct = default)
     {
         count = count < 0 ? 0 : count;
 

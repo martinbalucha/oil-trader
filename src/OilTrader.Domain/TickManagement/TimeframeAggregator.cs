@@ -3,7 +3,7 @@ using OilTrader.Contracts;
 using OilTrader.Contracts.Messaging;
 using OilTrader.Contracts.TickManagement;
 
-namespace OilTrader.Domain;
+namespace OilTrader.Domain.TickManagement;
 
 /// <summary>
 /// The aggregator maintains two "open bars" simultaneously: one M1 and one H1.

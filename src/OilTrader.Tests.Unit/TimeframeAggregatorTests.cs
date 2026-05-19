@@ -4,6 +4,7 @@ using OilTrader.Contracts;
 using OilTrader.Contracts.Messaging;
 using OilTrader.Contracts.TickManagement;
 using OilTrader.Domain;
+using OilTrader.Domain.TickManagement;
 
 namespace OilTrader.Tests.Unit;
 
