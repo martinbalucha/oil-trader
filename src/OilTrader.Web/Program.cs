@@ -3,6 +3,7 @@ using OilTrader.Contracts.Messaging;
 using OilTrader.Contracts.TickManagement;
 using OilTrader.Domain;
 using OilTrader.Domain.Messaging;
+using OilTrader.Domain.TickManagement;
 using Serilog;
 using Serilog.Formatting.Json;
 
@@ -28,6 +29,7 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton<ITickRepository, QueueTickRepository>();
 builder.Services.AddSingleton<IMessagePublisher, InMemoryMessagePublisher>();
 builder.Services.AddSingleton<ITimeframeAggregator, TimeframeAggregator>();
+builder.Services.AddSingleton<ITickService, TickService>();
 
 var app = builder.Build();
 

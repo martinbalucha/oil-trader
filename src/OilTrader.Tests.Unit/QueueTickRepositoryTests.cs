@@ -1,5 +1,6 @@
 ﻿using OilTrader.Contracts;
 using OilTrader.Domain;
+using OilTrader.Domain.TickManagement;
 
 namespace OilTrader.Tests.Unit;
 
