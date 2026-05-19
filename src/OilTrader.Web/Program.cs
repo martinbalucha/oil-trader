@@ -8,7 +8,6 @@ using OilTrader.Domain.TickManagement;
 using OilTrader.Web.Infrastructure;
 using Serilog;
 using Serilog.Formatting.Json;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
