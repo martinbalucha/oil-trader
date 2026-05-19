@@ -8,11 +8,15 @@
         <RootNamespace>OilTrader.Web</RootNamespace>
         <!-- ExternalApis:* keys must not be committed; use dotnet user-secrets or env vars (see MVP spec). -->
         <UserSecretsId>f7e8d9c0-b2a3-4d5e-8f90-123456789abc</UserSecretsId>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="10.0.0" />
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="10.0.0" />
         <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
         <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
     </ItemGroup>
 
     <ItemGroup>
