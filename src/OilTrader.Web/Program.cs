@@ -51,10 +51,6 @@ builder.Services
 builder.Services.AddSwaggerGen(o =>
 {
     o.SwaggerDoc("v1", new OpenApiInfo { Title = "OilTrader API", Version = "v1" });
-    // Include XML comments if GenerateDocumentationFile is enabled
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
-    if (File.Exists(xmlPath))
-        o.IncludeXmlComments(xmlPath);
 });
 
 builder.Services.AddExceptionHandler<OilTraderExceptionHandler>();
