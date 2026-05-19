@@ -1,4 +1,4 @@
-using OilTrader.Contracts;
+﻿using OilTrader.Contracts;
 using System.ComponentModel.DataAnnotations;
 
 namespace OilTrader.Web.Models;

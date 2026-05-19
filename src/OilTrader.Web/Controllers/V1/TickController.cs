@@ -1,4 +1,4 @@
-using Asp.Versioning;
+﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using OilTrader.Contracts.TickManagement;
 using OilTrader.Web.Models;
