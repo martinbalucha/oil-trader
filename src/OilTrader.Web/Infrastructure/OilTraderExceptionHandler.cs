@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
+﻿using System.Text.Json;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
@@ -23,15 +24,17 @@ public class OilTraderExceptionHandler : IExceptionHandler
     {
         _logger.LogError(ex, "Unhandled exception");
 
+        var problem = new ProblemDetails
+        {
+            Status = StatusCodes.Status500InternalServerError,
+            Title = "An unexpected error occurred.",
+            Detail = _env.IsDevelopment() ? ex.Message : null,
+            Type = "https://tools.ietf.org/html/rfc9110#section-15.6.1",
+        };
+
         ctx.Response.StatusCode = StatusCodes.Status500InternalServerError;
-        await ctx.Response.WriteAsJsonAsync(
-            new ProblemDetails
-            {
-                Status = StatusCodes.Status500InternalServerError,
-                Title = "An unexpected error occurred.",
-                Detail = _env.IsDevelopment() ? ex.Message : null,
-            },
-            ct);
+        ctx.Response.ContentType = "application/problem+json";
+        await ctx.Response.WriteAsync(JsonSerializer.Serialize(problem), ct);
 
         return true;
     }
